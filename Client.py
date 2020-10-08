@@ -62,6 +62,10 @@ class Interface:
                 self.LoginCredentialsPassword(self.Entry.get())
                 self.ClearEntry()
                 self.PasswordMode(False)
+                self.InactiveMode(True)
+                self.CounterLabel.config(text = "Processing...")
+
+                self.LoginRequest(self.LoginEmail, self.LoginPassword)
             else:
                 return self.OnLogin()
 
@@ -76,7 +80,10 @@ class Interface:
                 self.CreateCredentialsPassword(self.Entry.get())
                 self.ClearEntry()
                 self.PasswordMode(False)
-                
+                self.InactiveMode(True)
+                self.CounterLabel.config(text = "Processing...")
+
+                self.CreateRequest(self.CreateEmail, self.CreatePassword)
             else:
                 return self.OnCreateAccount()
 
@@ -121,6 +128,13 @@ class Interface:
         self.CreateEmail = email
     def CreateCredentialsPassword(self, password):
         self.CreatePassword = password
+
+    #Request and Task handlers
+    def LoginRequest(self, email, password):
+        print(email, password)
+
+    def CreateRequest(self, email, password):
+        print(email, password)
 
     #Main
     def execute(self):
