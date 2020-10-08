@@ -1,5 +1,10 @@
-# Event Listeners in Lua [SOON]
-Event listeners in Lua, inspired by Roblox Event listeners
+# Experimental Account Creation System
 <hr>
 
-Source code for event listeners I created
+## Supports:
+-Making an account using Email and Password
+
+-Login into the account, an OTP will be sent to Email
+
+### HTTP Requests, Server, Client, GUI Interface
+Work in Progress!
